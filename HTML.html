@@ -8,80 +8,48 @@
 
 </head>
 <body>
-        <div class="frame">
-            <div class="mainbox"> <div class="text1">로또 번호 생성기</div></div>
-            <div class="text1"></div>
-            <div class="text2">행운의 번호를 생성해보세요!</div>  
-            <div class="text3">번호 생성</div> 
-            <div class="background-1"><div class="text_question">?</div></div>
-            <div class="background-2"><div class="text_question">?</div></div>
-            <div class="background-3"><div class="text_question">?</div></div>
-            <div class="background-4"><div class="text_question">?</div></div>
-            <div class="background-5"><div class="text_question">?</div></div>
-            <div class="background-6"><div class="text_question">?</div></div>
-            <div class="box2"> <div class="text4">번호 생성하기</div></div>
-
-            <div class="middlebox">
-                <div class="text5">로또 구매하기</div>
-                <div class="text6">구매 수량:</div>
-                <div class="container">
-                    <input type="text" class="input-box" />
-                </div>
-                <div class="text7">총 금액: 3000원 (1장당 1,000원)</div>
-                <div class="box2"></div>
-                <div class="text8">구매하기</div>
-            </div>     
-            <div class="endbox">
-                <div class="text1">당첨 결과 확인</div>
-                <div class="text2">이번 주 당첨 번호:</div>
-<<<<<<< HEAD
-                <div class="background-1"><div class="text_question">?</div></div>
-                <div class="background-2"><div class="text_question">?</div></div>
-                <div class="background-3"><div class="text_question">?</div></div>
-                <div class="background-4"><div class="text_question">?</div></div>
-                <div class="background-5"><div class="text_question">?</div></div>
-                <div class="background-6"><div class="text_question">?</div></div>
-                <div class="text3">내가 구매한 번호:</div>
-                <div class="background-7"><div class="text_question">?</div></div>
-                <div class="background-8"><div class="text_question">?</div></div>
-                <div class="background-9"><div class="text_question">?</div></div>
-                <div class="background-10"><div class="text_question">?</div></div>
-                <div class="background-11"><div class="text_question">?</div></div>
-                <div class="background-12"><div class="text_question">?</div></div>
-                <div class="box1"></div>
-                <div class="text4">결과: 2개 일치</div>
-                <div class="background-13"><div class="text_question">?</div></div>
-                <div class="background-14"><div class="text_question">?</div></div>
-                <div class="background-15"><div class="text_question">?</div></div>
-                <div class="background-16"><div class="text_question">?</div></div>
-                <div class="background-17"><div class="text_question">?</div></div>
-                <div class="background-18"><div class="text_question">?</div></div>
-=======
-                <div class="background-1"><div class="text_question">3</div></div>
-                <div class="background-2"><div class="text_question">14</div></div>
-                <div class="background-3"><div class="text_question">25</div></div>
-                <div class="background-4"><div class="text_question">33</div></div>
-                <div class="background-5"><div class="text_question">41</div></div>
-                <div class="background-6"><div class="text_question">9</div></div>
-                <div class="text3">내가 구매한 번호:</div>
-                <div class="background-7"><div class="text_question">7</div></div>
-                <div class="background-8"><div class="text_question">12</div></div>
-                <div class="background-9"><div class="text_question">25</div></div>
-                <div class="background-10"><div class="text_question">38</div></div>
-                <div class="background-11"><div class="text_question">42</div></div>
-                <div class="background-12"><div class="text_question">9</div></div>
-                <div class="box1"></div>
-                <div class="text4">결과: 2개 일치</div>
-                <div class="background-13"><div class="text_question">3</div></div>
-                <div class="background-14"><div class="text_question">14</div></div>
-                <div class="background-15"><div class="text_question">25</div></div>
-                <div class="background-16"><div class="text_question">33</div></div>
-                <div class="background-17"><div class="text_question">41</div></div>
-                <div class="background-18"><div class="text_question">9</div></div>
->>>>>>> 99cee71 (number change)
-                <div class="box2"></div>
-                <div class="text5">결과: 6개 일치-당첨</div>
+    <div class="frame">
+        <div class="topic_frame">
+            <div class="text1">로또 번호 생성기</div>
+            <div class="text2">행운의 번호를 생성해보세요!</div>
+        </div>
+        <div class="number_make_frame">
+            <h2 class="text3">번호 생성</h2>
+            <div class="circle_number" id="winning_numbers">
+                <div class="ball yellow">?</div>
+                <div class="ball blue">?</div>
+                <div class="ball red">?</div>
+                <div class="ball gray">?</div>
+                <div class="ball green">?</div>
+                <div class="ball yellow">?</div>
+            </div>
+            <div class="button_frame">
+                <button class="button text2" onclick="generateWinningNumbers()">번호 생성하기</button>
             </div>
         </div>
-    </body>
+        <div class="buy_frame">
+            <h2 class="text3">로또 구매하기</h2>
+            <div class="choice">
+                <div class="buy_count">
+                    <div class="text4">구매 수량:</div>
+                    <input class="choice_count" id="buyCount" type="text"/>
+                </div>
+                <div class="total_price">총 금액: 0원(1장당 1,000원)</div>
+                <div class="button_frame">
+                    <button class="button text2" onclick="generatePurchaseNumbers()">구매하기</button>
+                </div>
+            </div>
+        </div>
+        <div class="result_check_frame">
+            <h2 class="text3">당첨 결과 확인</h2>
+            <div class="result_box">
+                <div class="text4">이번 주 당첨 번호:</div>
+                <div class="circle_number" id="display_winning_numbers"></div>
+            </div>
+            <div class="text4">내가 구매한 번호:</div>
+            <div id="purchased_numbers_area"></div>
+        </div>
+    </div>
+    <script src="getNumbers.js"></script>
+</body>
 </html>
